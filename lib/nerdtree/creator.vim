@@ -4,7 +4,6 @@
 "============================================================
 let s:Creator = {}
 let g:NERDTreeCreator = s:Creator
-let g:NERDTree.LastWinName = ""
 
 "FUNCTION: s:Creator._bindMappings() {{{1
 function! s:Creator._bindMappings()

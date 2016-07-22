@@ -1,4 +1,3 @@
-endif
 let g:loaded_nerdtree_autoload = 1
 
 function! nerdtree#version()
