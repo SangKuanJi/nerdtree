@@ -346,6 +346,7 @@ function! s:Creator.togglePrimary(dir)
                 else
                     let g:NERDTree.LastWinName = bufname("%")
                     exe 1 . "wincmd w"
+                    exe "vertical resize " . g:NERDTreeWinSize
                 endif
             else
                 call g:NERDTree.Close()

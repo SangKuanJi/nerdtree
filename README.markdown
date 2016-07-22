@@ -3,6 +3,7 @@
 * 修改 NERDTreeToggle 行为
 	* 原来 NERDTreeToggle : (假设快捷键 F2 激活) 按下F2, 如果 nerdtree 没有启动, 则启动它并获取焦点. 再次按下 F2 将关闭 nerdtree.
 	* 修改 NERDTreeToggle : (假设快捷键 F2 激活) 按下F2, 如果 nerdtree 没有启动, 则启动它并获取焦点. 再次按下 F2 nerdtree 不关闭, 焦点后退(返回到没有激活nerdtree时的窗口).
+	*	增加: 每次按 F2 时, 维护 nerdtree 窗口宽度
 
 The NERD Tree
 =============
