@@ -332,16 +332,18 @@ endfunction
 "dir: the full path for the root node (is only used if the NERD tree is being
 "initialized.
 function! s:Creator.togglePrimary(dir)
+    echom "Creator.togglePrimary"
     if g:NERDTree.ExistsForTab()
         if !g:NERDTree.IsOpen()
+            echom "is not open"
             call self._createTreeWin()
             if !&hidden
                 call b:NERDTree.render()
             endif
             call b:NERDTree.ui.restoreScreenState()
         else
-            if bufwinnr(t:NERDTreeBufName) == 1
-                if bufname("%") == t:NERDTreeBufName
+            if bufwinnr(t:NERDTreeBufName) == 1 " 是否是左边第一个窗口
+                if bufname("%") == t:NERDTreeBufName  " 当前焦点所在窗口是否是 NERDTRee
                     exe bufwinnr(g:NERDTree.LastWinName) . "wincmd w"
                 else
                     let g:NERDTree.LastWinName = bufname("%")
@@ -353,6 +355,8 @@ function! s:Creator.togglePrimary(dir)
             endif
         endif
     else
+        echom "else g:NERDTree.ExistsForTab"
+        let g:NERDTree.LastWinName = bufname("%")
         call self.createPrimary(a:dir)
     endif
 endfunction
