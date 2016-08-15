@@ -332,7 +332,7 @@ endfunction
 "dir: the full path for the root node (is only used if the NERD tree is being
 "initialized.
 function! s:Creator.togglePrimary(dir)
-    echom "Creator.togglePrimary"
+    " echom "Creator.togglePrimary"
     if g:NERDTree.ExistsForTab()
         if !g:NERDTree.IsOpen()
             echom "is not open"
@@ -355,7 +355,7 @@ function! s:Creator.togglePrimary(dir)
             endif
         endif
     else
-        echom "else g:NERDTree.ExistsForTab"
+        " echom "else g:NERDTree.ExistsForTab"
         let g:NERDTree.LastWinName = bufname("%")
         call self.createPrimary(a:dir)
     endif
